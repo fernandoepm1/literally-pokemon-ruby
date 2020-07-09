@@ -1,7 +1,10 @@
-# frozen_string_literal: true
+#!/usr/bin/env ruby
 
-class Game
-  def initialize(battle)
-    @battle = battle
-  end
+interface = LPR::Interface.new
+interface.draw_title
+
+running = true
+
+while running
+  # run game
 end
