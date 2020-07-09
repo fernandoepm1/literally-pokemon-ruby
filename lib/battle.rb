@@ -1,4 +1,4 @@
-# frozen_string_literal: true
+#!/usr/bin/env ruby
 
 class Battle
   def initialize(player1, player2)
