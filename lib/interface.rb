@@ -2,8 +2,9 @@
 
 module LPR
   class Interface
-    def draw_title
+    def draw_title(title = '')
       title << "Poké Battle Simulator"
+      puts title
     end
 
     def ask(question)

@@ -3,7 +3,7 @@
 interface = LPR::Interface.new
 interface.draw_title
 
-running = true
+running = false
 
 while running
   # run game
