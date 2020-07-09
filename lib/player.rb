@@ -6,10 +6,9 @@ module LPR
     attr_accessor :name
     attr_accessor :type
 
-    enum type: [:human, :cpu]
-
-    def initialize(name)
+    def initialize(name, type)
       @name = name
+      @type = type
     end
   end
 end
