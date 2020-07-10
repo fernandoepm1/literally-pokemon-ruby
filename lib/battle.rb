@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-class Battle
+class LPR::Battle
   def initialize(player1, player2)
     @player1 = player1
     @player2 = player2
