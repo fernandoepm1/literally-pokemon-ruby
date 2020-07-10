@@ -8,4 +8,6 @@ git_source(:github) do |repo_name|
 end
 
 gem 'rspec'
+gem 'byebug'
 gem 'colorize'
+gem 'json'
