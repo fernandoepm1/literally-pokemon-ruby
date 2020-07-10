@@ -1,5 +1,9 @@
 #!/usr/bin/env ruby
 
+require 'json'
+require 'byebug'
+require 'colorize'
+
 LPR_VERSION = "1.0"
 
 # Require libraries
