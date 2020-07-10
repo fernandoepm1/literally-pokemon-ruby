@@ -12,6 +12,7 @@ load "lib/interface.rb"
 load "lib/move.rb"
 load "lib/player.rb"
 load "lib/pokemon.rb"
+load "lib/storage.rb"
 
 # Start
 load "lib/game.rb"
