@@ -16,3 +16,4 @@ load "lib/storage.rb"
 
 # Start
 load "lib/game.rb"
+LPR::Game.new.run
