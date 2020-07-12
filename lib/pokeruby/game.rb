@@ -13,6 +13,7 @@ class LPR::Game
   def run
     @is_running = true
 
+    byebug
     while @is_running
       @interface.draw_title
       set_mode
