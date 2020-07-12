@@ -7,7 +7,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'rspec'
-gem 'byebug'
-gem 'colorize'
+gem 'httparty'
 gem 'json'
+gem 'colorize'
+gem 'byebug'
+gem 'rspec'
