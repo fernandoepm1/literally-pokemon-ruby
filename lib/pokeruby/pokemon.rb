@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-class Pokemon
+class LPR::Pokemon
   def initialize(species)
     @species = species
   end

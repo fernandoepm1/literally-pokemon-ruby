@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-class Move
+class LPR::Move
   def initialize(name)
     @name = name
   end
