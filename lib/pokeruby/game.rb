@@ -13,10 +13,12 @@ class LPR::Game
   def run
     @is_running = true
 
-    byebug
     while @is_running
       @interface.draw_title
+      @interface.ask_game_mode
+
       set_mode
+      define_players
 
       @is_running = false
     end
@@ -26,15 +28,20 @@ class LPR::Game
 
   def set_mode
     while true
-      @interface.ask_game_mode
-      @mode = gets.chomp
+      option = gets.chomp
 
-      break if valid_mode?
-      puts "Invalid option, try again.\n"
+      break if is_valid?(option)
+      print "Invalid option, try again: "
     end
+
+    @mode = (option == '1' ? 'arcade' : 'versus')
   end
 
-  def valid_mode?
-    @mode == '1' || @mode == '2'
+  def define_players
+    # Create player objects
+  end
+
+  def is_valid?(option)
+    option == '1' || option == '2'
   end
 end
