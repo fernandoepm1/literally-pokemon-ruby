@@ -3,11 +3,13 @@
 class LPR::Game
   attr_accessor :is_running
   attr_accessor :mode
+  attr_accessor :players
 
   attr_reader :interface
 
   def initialize
     @interface = LPR::Interface.new
+    @players = {}
   end
 
   def run
