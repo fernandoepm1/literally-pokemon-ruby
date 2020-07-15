@@ -16,6 +16,8 @@ class LPR::Interface
     print question
   end
 
-  def ask(question)
+  def ask_player_name(player, question = '')
+    question << "#{player}, what is your name? "
+    print question
   end
 end
