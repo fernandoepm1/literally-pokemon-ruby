@@ -33,14 +33,25 @@ class LPR::Game
       option = gets.chomp
 
       break if is_valid?(option)
-      print "Invalid option, try again: "
+      print "Invalid option, try again: " # interface?
     end
 
     @mode = (option == '1' ? 'arcade' : 'versus')
   end
 
   def define_players
-    # Create player objects
+    if @mode == 'arcade'
+      print "Player 1, what is your name? "
+      players[:player1] = LPR::Player.new(gets.chomp, :human)
+      # Usar a Faker depois pra gerar um nome random
+      players[:player2] = LPR::Player.new('Zé', :cpu)
+    elsif @mode == 'versus'
+      print "Player 1, what is your name? "
+      players[:player1] = LPR::Player.new(gets.chomp, :human)
+
+      print "Player 2, what is your name? "
+      players[:player2] = LPR::Player.new(gets.chomp, :human)
+    end
   end
 
   def is_valid?(option)
