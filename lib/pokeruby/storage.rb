@@ -9,6 +9,9 @@ class LPR::Storage
       response = get("/pokemon?offset=#{offset}&limit=#{limit}")
       response['results']
     end
+
+    def pokemon_names
+      pokemons.collect { |poke| poke['name'] }
     end
 
     def fetch_pokemon(name)
