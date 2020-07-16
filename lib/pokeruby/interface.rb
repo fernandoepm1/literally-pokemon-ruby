@@ -20,4 +20,9 @@ class LPR::Interface
     question << "#{player}, what is your name? "
     print question
   end
+
+  def ask_for_pokemon(question = '')
+    question << "Choose a pokémon: "
+    print question
+  end
 end
