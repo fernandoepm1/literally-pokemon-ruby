@@ -23,6 +23,7 @@ class LPR::Game
 
       set_mode
       define_players
+      choose_pokemons
 
       @is_running = false
     end
@@ -41,22 +42,35 @@ class LPR::Game
     @mode = (option == '1' ? 'arcade' : 'versus')
   end
 
+  def is_valid?(option)
+    option == '1' || option == '2'
+  end
+
   def define_players
     if @mode == 'arcade'
       print "Player 1, what is your name? "
-      players[:player1] = LPR::Player.new(gets.chomp, :human)
+      players << LPR::Player.new(gets.chomp, :human, self)
       # Usar a Faker depois pra gerar um nome random
-      players[:player2] = LPR::Player.new('Zé', :cpu)
+      players << LPR::Player.new('Zé', :cpu, self)
     elsif @mode == 'versus'
       print "Player 1, what is your name? "
-      players[:player1] = LPR::Player.new(gets.chomp, :human)
+      players << LPR::Player.new(gets.chomp, :human, self)
 
       print "Player 2, what is your name? "
-      players[:player2] = LPR::Player.new(gets.chomp, :human)
+      players << LPR::Player.new(gets.chomp, :human, self)
     end
   end
 
-  def is_valid?(option)
-    option == '1' || option == '2'
+  # Deixar escolher de 3 formas
+  # por nome, pelo número da pokedex e pegar um random
+  def choose_pokemons
+    players.each do |player|
+      player.choose_pokemon
+    end
+  end
+
+  def available_pokemons
+    # o jogo deve saber quais os pokemons que tem
+    # e não o player
   end
 end
