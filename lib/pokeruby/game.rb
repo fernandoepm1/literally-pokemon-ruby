@@ -1,15 +1,17 @@
 #!/usr/bin/env ruby
 
 class LPR::Game
+  attr_reader :interface
+  attr_reader :storage
+
   attr_accessor :is_running
   attr_accessor :mode
   attr_accessor :players
 
-  attr_reader :interface
-
   def initialize
     @interface = LPR::Interface.new
-    @players = {}
+    @storage   = LPR::Storage.new
+    @players   = []
   end
 
   def run
