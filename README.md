@@ -1,6 +1,6 @@
-# Literally Pokémon Ruby
+# PokéRuby
 
-A Pokémon battle simulator using ruby
+A Pokémon battle simulator using pure ruby OOP, consuming the data from PokéAPI.
 
 ## Gems used
 
@@ -8,8 +8,12 @@ A Pokémon battle simulator using ruby
 - json
 - colorize
 
+## Services
+
+- PokéAPI
+
 ## Running the game
 
 ```bash
-ruby start.rb
+ruby lib/pokeruby.rb
 ```
