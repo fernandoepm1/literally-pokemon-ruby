@@ -4,13 +4,13 @@ A Pokémon battle simulator using pure ruby OOP, consuming the data from PokéAP
 
 ## Gems used
 
-- httparty
-- json
-- colorize
+- [httparty](https://github.com/jnunemaker/httparty)
+- [json](https://github.com/flori/json)
+- [colorize](https://github.com/fazibear/colorize)
 
 ## Services
 
-- PokéAPI
+- [PokéAPI](https://pokeapi.co/docs/v2)
 
 ## Running the game
 
