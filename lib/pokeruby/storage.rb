@@ -6,8 +6,7 @@ class LPR::Storage
 
   class << self
     def pokemons(offset = '0', limit = '151')
-      response = get("/pokemon?offset=#{offset}&limit=#{limit}")
-      response['results']
+      get("/pokemon?offset=#{offset}&limit=#{limit}")['results']
     end
 
     def pokemon_names
@@ -15,7 +14,7 @@ class LPR::Storage
     end
 
     def fetch_pokemon(name)
-      get("/pokemon/#{name.downcase}")
+      get("/pokemon/#{name.downcase}")['results']
     end
   end
 end
